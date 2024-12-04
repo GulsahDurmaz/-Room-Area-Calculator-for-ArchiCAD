@@ -2,33 +2,26 @@
 
 ## Overview
 
-This Python script is designed to be used in conjunction with ArchiCAD, specifically for calculating the area of each room in an ArchiCAD project. The script identifies zones and room stamps, performs area calculations, and updates the ArchiCAD project accordingly.
+This Python script is designed to integrate with ArchiCAD, helping automate the process of calculating the area of each apartment (zone) within an ArchiCAD project. The script identifies zones, performs area calculations for room stamps, and updates the ArchiCAD project properties accordingly.
+
+It is particularly useful in projects where multiple zones need to have their areas calculated and displayed in a customized manner.
 
 ## Prerequisites
 
-Before using this script, make sure you have completed the following preparations in your ArchiCAD project:
+Before using this script, ensure you have set up the necessary custom properties in your ArchiCAD project:
 
-1. Create a new subcategory named `sum_of_units` under the "Eigenschaften" (Properties) section in the ArchiCAD project.
+1. **Create a new subcategory** under the Properties section in the ArchiCAD project named `zone_calculator`.
 
-2. Add the following sub-properties under the `sum_of_units` subcategory:
-   - **`unit_number`**: Represents the unit number of each zone.
-   - **`unit_number_show`**: A flag to determine whether the unit number should be displayed.
-   - **`sum_of_units_area`**: Represents the total area of the units.
+2. **Add the following custom properties** under the `sum_of_units` subcategory:
+   - `zone_number`: Represents the unit number of each zone.
+   - `total_area_show`: A Boolean flag to determine whether the total area should be displayed.
+   - `sum_of_zone_area`: Represents the total area of the units.
+
+3. **Video Tutorial**: Follow this [YouTube video guide](https://www.youtube.com/watch?v=arC290t5Ejg) for detailed instructions on setting up the required properties in ArchiCAD.
 
 ## ArchiCAD File Compatibility
 
-This script is compatible with ArchiCAD version 26. If you are using a different version, you may need to update the script accordingly.
+This script has been tested and is compatible with **ArchiCAD version 28**. If you are using a different version, you may need to modify the script for compatibility with that version. This may include adjusting API functions or the names of custom properties.
 
-## Usage
-
-1. Open an ArchiCAD project.
-
-2. Execute the Python script in an environment that supports ArchiCAD Python scripting.
-
-3. The script will calculate the area for each room and update the ArchiCAD project.
-
-## Detailed Explanation
-
-The Python script utilizes the ArchiCAD Python API to interact with the project. It identifies zones and room stamps, calculates the area, and updates the total area for each unit.
-
-Please note that this README provides a basic overview,
+   ```bash
+   python "Room Area Calculator for ArchiCAD.py"
