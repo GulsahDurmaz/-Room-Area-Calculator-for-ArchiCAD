@@ -1,4 +1,4 @@
-# Room Area Calculator for ArchiCAD
+# Zone Area Calculator for ArchiCAD
 
 ## Overview
 
@@ -24,4 +24,3 @@ Before using this script, ensure you have set up the necessary custom properties
 This script has been tested and is compatible with **ArchiCAD version 28**. If you are using a different version, you may need to modify the script for compatibility with that version. This may include adjusting API functions or the names of custom properties.
 
    ```bash
-   python "Room Area Calculator for ArchiCAD.py"
